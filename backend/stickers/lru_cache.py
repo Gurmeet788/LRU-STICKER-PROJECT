@@ -14,7 +14,7 @@ class LRUcache:
         self.tail = Node(0,0)
         
         self.head.next = self.tail
-        self.tail.prev = self
+        self.tail.prev = self.head
 
     def add_front(self,node):
         node.next = self.head.next
