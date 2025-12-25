@@ -33,19 +33,21 @@ def add_stickers():
     value = data.get("value")
 
     cache.put(key,value)
-    return jsonify({"message:" : "Stickers_Add", "key" : key , "value": value})
+    print(key,value)
+    return jsonify({"message" : "Stickers_Add", "key" : key , "value": value})
 
 @app.route("/get/<key>", methods=["GET"])
 def get_sticker(key):
     sticker = cache.get(key=key)
-    return jsonify({"key:": key, "Sticker:": sticker})
+    print(key)
+    return jsonify({"key": key, "Sticker": sticker})
 
 @app.route("/get_cache", methods=["GET"])
 def all_cache():
     return jsonify(cache.get_all_cache())
 
 @app.route("/recent",methods=["GET"])
-def mru():
+def mru(): #most recent element in cache
     sticker = cache.head.next.key
     value = cache.head.next.value
     return jsonify({"key":sticker, "name": value})
