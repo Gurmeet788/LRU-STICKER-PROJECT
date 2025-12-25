@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Sticker Cache</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 LRU Sticker Cache System</h1>
+        
+        <div class="main-grid">
+            <!-- Available Stickers -->
+            <div class="card">
+                <h2>📦 Available Stickers</h2>
+                <div id="stickerGrid" class="sticker-grid">
+                    <div class="loading">Loading stickers...</div>
+                </div>
+            </div>
+
+            <!-- LRU Cache View -->
+            <div class="card">
+                <h2>💾 LRU Cache (Max 10)</h2>
+                <div class="controls">
+                    <input type="text" id="searchKey" placeholder="Enter sticker key to search...">
+                    <button class="btn" id="getCacheBtn">Get</button>
+                </div>
+                <ul id="cacheList" class="cache-list">
+                    <li class="empty-state">Cache is empty</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="status" class="status" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
