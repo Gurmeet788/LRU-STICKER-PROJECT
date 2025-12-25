@@ -1,4 +1,5 @@
-const API_BASE = 'http://127.0.0.1:5000'; // Change to your backend URL
+const hostname = window.location.hostname; // e.g., "127.0.0.1" or "192.168.1.6"
+const API_BASE = `http://${hostname}:5000`; // Change to your backend URL
 let allStickers = [];
 
 // Show status message
