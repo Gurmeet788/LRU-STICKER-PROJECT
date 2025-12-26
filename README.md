@@ -19,7 +19,6 @@ LRU-STICKER-PROJECT/
 ├─ backend/
 │ ├─ emoji/ # Sticker images folder
 │ ├─ lru/
-│ │ ├─ init.py
 │ │ └─ lru_cache.py # LRU Cache implementation
 │ └─ app.py # Flask backend server
 │
@@ -32,10 +31,6 @@ LRU-STICKER-PROJECT/
 ├─ requirements.txt # Python dependencies
 ├─ Dockerfile # Docker setup
 └─ README.md
-
-yaml
-Copy code
-
 ---
 
 ## ⚡ Features
